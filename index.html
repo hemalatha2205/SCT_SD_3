@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Sudoku Solver</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">🧩 puzzle solver</p>
+          <h1>Sudoku Solver</h1>
+          <p class="subtitle">
+            Enter a puzzle, validate it, and let the backtracking engine solve it instantly.
+          </p>
+        </div>
+        <button id="themeToggle" class="ghost-btn" type="button">🌙 Dark Mode</button>
+      </header>
+
+      <main class="dashboard">
+        <section class="board-card">
+          <div class="controls">
+            <div class="control-group">
+              <label for="difficulty">Difficulty</label>
+              <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </div>
+
+            <div class="button-row">
+              <button id="solveBtn" class="primary-btn" type="button">Solve</button>
+              <button id="clearBtn" class="secondary-btn" type="button">Clear</button>
+              <button id="sampleBtn" class="secondary-btn" type="button">Sample Puzzle</button>
+            </div>
+          </div>
+
+          <div id="board" class="board" aria-label="Sudoku board"></div>
+
+          <div class="status-card">
+            <p id="statusText" class="status-text">Enter a puzzle or load a sample to begin.</p>
+            <div class="meta">
+              <span>Time Taken</span>
+              <strong id="timerText">0.00s</strong>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
